@@ -1,0 +1,196 @@
+﻿<Window
+    x:Class="calc.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:calc"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="350"
+    Height="550"
+    Background="{StaticResource defaultBackground}"
+    ResizeMode="CanMinimize"
+    mc:Ignorable="d">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Label Content="메뉴바" />
+        </StackPanel>
+        <DockPanel DockPanel.Dock="Top">
+            <TextBox
+                Margin="0"
+                Padding="10"
+                HorizontalContentAlignment="Right"
+                VerticalContentAlignment="Center"
+                Background="{StaticResource defaultBackground}"
+                DockPanel.Dock="Top"
+                FontSize="15"
+                IsReadOnly="True"
+                Text="stub" />
+            <TextBox
+                Margin="0"
+                Padding="10"
+                HorizontalContentAlignment="Right"
+                VerticalContentAlignment="Center"
+                Background="{StaticResource defaultBackground}"
+                DockPanel.Dock="Top"
+                FontSize="45"
+                IsReadOnly="True"
+                Text="stub" />
+
+        </DockPanel>
+
+        <Grid
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!--  row 0  -->
+            <Button
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="%"
+                Style="{StaticResource defaultButton}" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                Content="Root"
+                Style="{StaticResource defaultButton}" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="2"
+                Content="x^2"
+                Style="{StaticResource defaultButton}" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="3"
+                Content="1/x"
+                Style="{StaticResource defaultButton}" />
+
+            <!--  row 1  -->
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                Content="CE"
+                Style="{StaticResource defaultButton}" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                Content="C"
+                Style="{StaticResource defaultButton}" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="2"
+                Content="Back"
+                Style="{StaticResource defaultButton}" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="3"
+                Content="/"
+                Style="{StaticResource defaultButton}" />
+
+            <!--  row 2  -->
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                Content="7"
+                Style="{StaticResource defaultButtonNum}" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="1"
+                Content="8"
+                Style="{StaticResource defaultButtonNum}" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="2"
+                Content="9"
+                Style="{StaticResource defaultButtonNum}" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="3"
+                Content="X"
+                Style="{StaticResource defaultButton}" />
+
+            <!--  row 3  -->
+            <Button
+                Grid.Row="3"
+                Grid.Column="0"
+                Content="4"
+                Style="{StaticResource defaultButtonNum}" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="1"
+                Content="5"
+                Style="{StaticResource defaultButtonNum}" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="2"
+                Content="6"
+                Style="{StaticResource defaultButtonNum}" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="3"
+                Content="-"
+                Style="{StaticResource defaultButton}" />
+
+            <!--  row 4  -->
+            <Button
+                Grid.Row="4"
+                Grid.Column="0"
+                Content="1"
+                Style="{StaticResource defaultButtonNum}" />
+            <Button
+                Grid.Row="4"
+                Grid.Column="1"
+                Content="2"
+                Style="{StaticResource defaultButtonNum}" />
+            <Button
+                Grid.Row="4"
+                Grid.Column="2"
+                Content="3"
+                Style="{StaticResource defaultButtonNum}" />
+            <Button
+                Grid.Row="4"
+                Grid.Column="3"
+                Content="+"
+                Style="{StaticResource defaultButton}" />
+
+            <!--  row 5  -->
+            <Button
+                Grid.Row="5"
+                Grid.Column="0"
+                Content="+-"
+                Style="{StaticResource defaultButton}" />
+            <Button
+                Grid.Row="5"
+                Grid.Column="1"
+                Content="0"
+                Style="{StaticResource defaultButtonNum}" />
+            <Button
+                Grid.Row="5"
+                Grid.Column="2"
+                Content="."
+                Style="{StaticResource defaultButton}" />
+            <Button
+                Grid.Row="5"
+                Grid.Column="3"
+                Content="="
+                Style="{StaticResource defaultButton}" />
+
+
+        </Grid>
+    </DockPanel>
+</Window>
