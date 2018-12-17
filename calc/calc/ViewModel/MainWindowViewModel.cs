@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace calc.ViewModel
@@ -22,7 +23,6 @@ namespace calc.ViewModel
         private double _accu;
         private double _res;
         private int _oper;
-
         private string _historyString;
 
         public ICommand buttonCommand { get; set; }
@@ -82,7 +82,12 @@ namespace calc.ViewModel
 
         private void buttonClicked(object param)
         {
-
+            var v = param as Button;
+            App.log(TAG + "Button clicked -> ");
+            if (v != null)
+            {
+                App.log(TAG + "Button clicked -> " + v.Content);
+            }            
         }
     }
 }

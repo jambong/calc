@@ -16,6 +16,8 @@
             <Setter Property="Background" Value="{StaticResource defaultBackground1}"/>
             <Setter Property="FontSize" Value="27"/>
             <Setter Property="Margin" Value="1"/>
+            <Setter Property="Command" Value="{Binding buttonCommand}"/>
+            <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
         </Style>
         <Style x:Key="defaultButtonNum" TargetType="Button">
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -25,6 +27,8 @@
             <Setter Property="Background" Value="{StaticResource defaultBackground2}"/>
             <Setter Property="FontSize" Value="25"/>
             <Setter Property="Margin" Value="1"/>
+            <Setter Property="Command" Value="{Binding buttonCommand}"/>
+            <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
         </Style>
     </Application.Resources>
 </Application>
