@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
@@ -15,7 +16,8 @@ namespace calc
     {
         public static void log(string str)
         {
-            Console.Write("[App][Debug] -> " + str);
+            // Console.Write("[App][Debug] -> " + str);
+            Debug.WriteLine("[App][debug] -> " + str);
         }
     }
 }

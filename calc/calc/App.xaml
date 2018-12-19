@@ -1,34 +1,35 @@
-﻿<Application x:Class="calc.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:calc"
-             StartupUri="MainWindow.xaml">
+﻿<Application
+    x:Class="calc.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:calc"
+    StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <SolidColorBrush x:Key="defaultBackground" Color="#BDBDBD"/>
-        <SolidColorBrush x:Key="defaultBackground1" Color="#D8D8D8"/>
-        <SolidColorBrush x:Key="defaultBackground2" Color="#F2F2F2"/>
+        <SolidColorBrush x:Key="defaultBackground" Color="#BDBDBD" />
+        <SolidColorBrush x:Key="defaultBackground1" Color="#D8D8D8" />
+        <SolidColorBrush x:Key="defaultBackground2" Color="#F2F2F2" />
 
         <Style x:Key="defaultButton" TargetType="Button">
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            <Setter Property="VerticalAlignment" Value="Stretch"/>
-            <Setter Property="Background" Value="{StaticResource defaultBackground1}"/>
-            <Setter Property="FontSize" Value="27"/>
-            <Setter Property="Margin" Value="1"/>
-            <Setter Property="Command" Value="{Binding buttonCommand}"/>
-            <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="Background" Value="{StaticResource defaultBackground1}" />
+            <Setter Property="FontSize" Value="27" />
+            <Setter Property="Margin" Value="1" />
+            <Setter Property="Command" Value="{Binding Path=buttonCommand}" />
+            <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}" />
         </Style>
         <Style x:Key="defaultButtonNum" TargetType="Button">
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            <Setter Property="VerticalAlignment" Value="Stretch"/>
-            <Setter Property="Background" Value="{StaticResource defaultBackground2}"/>
-            <Setter Property="FontSize" Value="25"/>
-            <Setter Property="Margin" Value="1"/>
-            <Setter Property="Command" Value="{Binding buttonCommand}"/>
-            <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="Background" Value="{StaticResource defaultBackground2}" />
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="Margin" Value="1" />
+            <Setter Property="Command" Value="{Binding Path=buttonCommand}" />
+            <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}" />
         </Style>
     </Application.Resources>
 </Application>
