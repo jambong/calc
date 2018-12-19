@@ -41,7 +41,7 @@
                 DockPanel.Dock="Top"
                 FontSize="45"
                 IsReadOnly="True"
-                Text="{Binding accuString}" />
+                Text="{Binding currentString}" />
 
         </DockPanel>
 

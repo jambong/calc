@@ -23,7 +23,6 @@ namespace calc.ViewModel
         private double _accu;
         private string _currentString;
         private double _currentNum;
-        private int _oper;
         private string _historyString;
 
         private operEnum currentOper { get; set; }
@@ -48,15 +47,6 @@ namespace calc.ViewModel
             {
                 _currentNum = value;
                 OnpropertyChanged("currentNum");
-            }
-        }
-        public int oper
-        {
-            get { return _oper; }
-            set
-            {
-                _oper = value;
-                OnpropertyChanged("oper");
             }
         }
         public string historyString
@@ -112,6 +102,10 @@ namespace calc.ViewModel
             {
                 writeNumber(tmp);
             }
+            else if (isOper(tmp))
+            {
+                setOper(tmp);
+            }
         }
 
         private void writeNumber(string numStr)
@@ -148,10 +142,56 @@ namespace calc.ViewModel
 
         private void setOper(string oper)
         {
-            if(currentState == state.DOUBLE || currentState == state.LIT)
+            if(currentOper == operEnum.NONE && currentState != state.ZERO)
             {
-
+                if(oper == "X")
+                {
+                    accu = currentNum;
+                    currentOper = operEnum.MUL;                    
+                }
+                else if(oper == "+")
+                {
+                    accu = currentNum;
+                    currentOper = operEnum.PLUS;
+                }
+                else if (oper == "-")
+                {
+                    accu = currentNum;
+                    currentOper = operEnum.MINUS;
+                }
+                else if(oper == "/")
+                {
+                    accu = currentNum;
+                    currentOper = operEnum.DIV;
+                }
+                currentState = state.OPER;
             }
+            else if(currentOper != operEnum.NONE && currentState != state.ZERO)
+            {
+                calc(currentOper, currentNum);
+                currentOper = getOper(oper);
+            }
+        }
+
+        private operEnum getOper(string oper)
+        {
+            if (oper == "X")
+            {
+                return currentOper = operEnum.MUL;
+            }
+            else if (oper == "+")
+            {
+                return currentOper = operEnum.PLUS;
+            }
+            else if (oper == "-")
+            {
+                return currentOper = operEnum.MINUS;
+            }
+            else if (oper == "/")
+            {
+                return currentOper = operEnum.DIV;
+            }
+            return operEnum.NONE;
         }
 
         private void calc(operEnum oper, double newNumber)
